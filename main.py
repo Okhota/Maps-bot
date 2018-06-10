@@ -311,14 +311,8 @@ def start(bot, update):
     """Send a message when the command /start is issued."""
     update.message.reply_text('Hi!')
 def help(bot, update):
-    chat_id = update.message.chat_id
-    bot.send_photo(chat_id=chat_id, photo=open('pass.png', 'rb'))
-#def help(bot, update):
-    #"""Send a message when the command /help is issued."""
-    #update.message.reply_text('Type /go <start of path> <end of path>')
-    #chat_id = update.message.chat_id
-    #print(chat_id)
-    #bot.send_photo(chat_id=chat_id, photo='pass.png')
+    """Send a message when the command /help is issued."""
+    update.message.reply_text('Type /go <start of path> <end of path>')
 
 def go(bot, update,args):
     if args[0] == args[1]:
